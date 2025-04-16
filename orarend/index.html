@@ -1,0 +1,24 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Órarend</title>
+</head>
+<body>
+  <h1>Órarend</h1>
+
+  <div id="timetable"></div>
+
+  <h2>Új óra hozzáadása</h2>
+  <form id="addForm">
+    Nap: <input type="text" id="day" required />
+    Óra: <input type="number" id="hour" required />
+    Tantárgy: <input type="text" id="subject" required />
+    <button type="submit">Hozzáadás</button>
+  </form>
+
+  <script src="main.js"></script>
+</body>
+</html>
