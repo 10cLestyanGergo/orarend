@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>Órarend</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { padding: 8px; border: 1px solid #ccc; text-align: center; }
+    input, select { margin: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Órarend</h1>
+
+  <label for="daySelect">Válassz napot:</label>
+  <select id="daySelect">
+    <option value="">-- Válassz --</option>
+    <option value="Hétfő">Hétfő</option>
+    <option value="Kedd">Kedd</option>
+    <option value="Szerda">Szerda</option>
+    <option value="Csütörtök">Csütörtök</option>
+    <option value="Péntek">Péntek</option>
+  </select>
+
+  <table id="scheduleTable" style="display:none">
+    <thead>
+      <tr><th>Óra</th><th>Tantárgy</th><th>Művelet</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div id="formSection" style="display:none">
+    <h2>Új óra hozzáadása (<span id="currentDayLabel"></span>)</h2>
+    <form id="addForm">
+      <input type="number" id="hour" placeholder="Óra száma" required min="1" max="10" />
+      <input type="text" id="subject" placeholder="Tantárgy" required />
+      <button type="submit">Hozzáadás</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
